@@ -1,0 +1,73 @@
+\documentclass{letter}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{graphics}
+
+\usepackage{lipsum}
+\usepackage{graphicx}
+
+\usepackage{geometry} %Set paper size and margins
+ \geometry{
+ a4paper,
+ %total={148mm,210mm},
+ left=10mm,
+ top=10mm,
+ }
+
+\setlength\tabcolsep{.1cm}
+\begin{document}
+
+\fbox %Box Margin
+{
+	\begin{minipage}[t][8.1cm]{5cm}
+		\resizebox{5.2cm}{!}{
+	
+			\setlength{\tabcolsep}{0.1em} % for the horizontal padding
+			{\renewcommand{\arraystretch}{1.2}% for the vertical padding
+	
+				\begin{tabular}{|l|l|l|l|}
+				\toprule
+				 \multicolumn{2}{c}{\textbf{From Off}}	\\
+				\midrule
+				 1C & On & 1H & Floor  	\\
+				 2C & Ceiling & 2H & Turbo 	\\
+				 3C & Blinkies / Utilities & 3H & Strobes 	\\
+				 4C & Lockout & 7H & Aux Colour \\
+				 5C & Momentary Mode & 10H & Simple Config 	\\
+				 7C & Aux Brightness & 13H & Factory Reset 	\\
+				 10C & Simple Mode & 15C & Ver Check 	\\
+				\midrule
+				 \multicolumn{2}{c}{\textbf{From On}}	\\
+				\midrule
+				 1C & Off & 1H & Change Brightness 	\\
+				 2C & Turbo & 2H & Change Brightness down 	\\
+				 3C & Toggle Smooth/Ramp & 3H & Moment Turbo/Tint ramp 	\\
+				 4C & Lockout & 4H & 	\\
+				 5C & Moment Turbo & 5H & Sunset (1=5m)	\\
+				 7C & Simple Config & 7H & Ramp Config	\\
+				 10C & Manual Memory & 10H & Manual mem config	\\
+				\midrule
+				  \multicolumn{2}{c}{\textbf{From Lockout}}	\\
+				\midrule
+				3C &  Unlock &  1H &  Moon \\
+				7C &  Led Calib &  2H &  Low \\
+				10H &  Auto Lock &  & 	\\
+				\midrule
+				
+				 \multicolumn{2}{c}{\textbf{Strobes:}}	\\
+				\midrule
+				  \multicolumn{4}{c}{Candle(5H 1=5m), Bike, Party, Tactical, Storm} \\
+				\midrule
+				 \multicolumn{2}{c}{\textbf{Blinkies:}}	\\
+				\midrule
+				 \multicolumn{4}{c}{Batt(7H calib), Temp(7H calib), Beacon(1H 1=1s), SOS} \\
+				\midrule
+				\multicolumn{4}{c}{\textbf{{\huge ANDURIL 2.0}}} \\
+				\bottomrule
+				\end{tabular}
+			}
+		}
+	\end{minipage}
+}
+\end{document}
